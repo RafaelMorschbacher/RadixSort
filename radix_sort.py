@@ -82,9 +82,9 @@ def output_write(arr, output_file):
     arr_len = len(arr)
     for i in range(0, arr_len):
         if i == 0 or arr[i] != arr[i - 1]:
-            counter = 0
-            j = i
-            while arr[j] == arr[i] and j < arr_len-1:
+            counter = 1
+            j = i+1
+            while j < arr_len-1 and arr[j] == arr[i] :
                 counter += 1
                 j += 1
 
